@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*清除网页元素的内外边距*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*子元素的margin-top超过父元素时，就会造成塌陷*/
+        /*
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+            margin-top: 30px;
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            background-color: #ff8500;
+            margin-top: 50px;
+        }
+        */
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+            margin-top: 30px;
+            /*1、可以在父元素加个边框解决*/
+            /* border: 1px solid red; */
+            /*把red换成transparent，就是透明边框*/
+            /*2、加个padding*/
+            /* padding: 1px; */
+            /*3、为父元素添加overflow:hidden*/
+            overflow: hidden;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            background-color: #ff8500;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.red {
+    color: red;
+    text-align: center
+}
+
+.green {
+    background-color: green;
+}
+
+#aa {
+    font-style: italic;
+    /* italic=斜体，normal=正常 */
+    font-weight: 600;
+    /* 700=bold，400=normal */
+    font-size: 30px;
+    font-family: 'Microsoft Yahei';
+    text-decoration: underline;
+    /*none underline overline line-through */
+}
+
+.bb {
+    /* font: font-style font-weight font-size/line-height font-family */
+    /* 必须按照这个顺序 */
+    /* 可以不要style跟weight，直接写size跟family；size跟family是必须的 */
+    font: italic 800 20px '黑体';
+    color: blue;
+}
+
+* {
+    color: rebeccapurple;
+}
+
+.in {
+    text-indent: 2em;
+    /*首行缩进2字符*/
+}

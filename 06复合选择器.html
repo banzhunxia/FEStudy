@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            color: red;
+        }
+
+        /*后代选择器*/
+        .mm li a {
+            color: pink;
+        }
+
+        .t1 a {
+            color: green;
+        }
+
+        /*子选择器*/
+        .t2>a {
+            color: blueviolet;
+        }
+
+        /*并集选择器，元素之间用，隔开*/
+        .mm a,
+        .t2 a,
+        .t2 p {
+            font-size: 30px;
+        }
+
+        /*链接伪类选择器,一定要按照l v h a 的顺序来*/
+        /*a:link  未访问过的链接*/
+        .wl a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /*a:visited  访问过的链接*/
+        .wl a:visited {
+            color: orange;
+        }
+
+        /*a:hover  鼠标经过的链接*/
+        .wl a:hover {
+            color: pink;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+
+        /*a:active  鼠标按下时的链接*/
+        .wl a:active {
+            color: green;
+        }
+
+        /*focus伪类选择器*/
+        input:focus {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>第一</li>
+        <li>第二</li>
+        <li>第三</li>
+    </ul>
+    <ol class="mm">
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li><a href="#">链接</a></li>
+    </ol>
+    <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li><a href="#">链接</a></li>
+    </ol>
+    <div class="t1">
+        <a href="">儿子</a>
+        <p>
+            <a href="#">孙子</a>
+        </p>
+    </div>
+    <div class="t2">
+        <a href="#">儿子</a>
+        <p>
+            <a href="#">孙子</a>
+        </p>
+    </div>
+    <div class="wl">
+        <a href="#">小猪佩奇</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+</body>
+
+</html>

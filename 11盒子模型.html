@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 200px;
+            border-width: 2px;
+            border-style: solid;
+            /* border-style: dashed; */
+            /* border-style: dotted; */
+            border-color: green;
+            /*复合写法，没有顺序要求*/
+            border: 1px solid red;
+            border-top: 2px dashed blue;
+        }
+
+        table {
+            width: 500px;
+            height: 100px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid pink;
+            /*合并相邻的边框*/
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            /*内容与边框的距离*/
+            padding-left: 2px;
+            padding-top: 2px;
+            /*上下左右3*/
+            padding: 3px;
+            /*上下3 左右4*/
+            padding: 3px 4px;
+            /*上3 左右4 下5*/
+            padding: 3px 4px 5px;
+            /*上3 右4 下5 左6*/
+            padding: 3px 4px 5px 6px;
+        }
+
+        .mm {
+            width: 900px;
+            height: 300px;
+            background-color: aqua;
+            /*令左右外边距auto可实现居中(前提，得有个宽度)*/
+            margin: 10px auto;
+            /*行内元素或行内块元素实现居中，可以在他的父级中使用text-align: center*/
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div> <br>
+    <table>
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>关键词</th>
+                <th>趋势</th>
+                <th>进入搜索</th>
+                <th>最近七日</th>
+                <th>链接</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="image/up.svg" alt=""></td>
+                <td>456</td>
+                <td>123</td>
+                <td><a href="https://www.baidu.com" target="_blank">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>鬼吹灯</td>
+                <td><img src="image/up.svg" alt=""></td>
+                <td>456</td>
+                <td>123</td>
+                <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>西游记</td>
+                <td><img src="image/down.svg" alt=""></td>
+                <td>456</td>
+                <td>123</td>
+                <td><a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="mm">
+        <span>中间</span>
+    </div>
+</body>
+
+</html>

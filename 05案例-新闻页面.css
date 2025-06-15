@@ -1,0 +1,39 @@
+body {
+    font: 16px/28px 'Microsoft Yahei';
+    margin: 20px;
+}
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+.gray {
+    color: #888888;
+    font-size: 12px;
+    text-align: center;
+}
+
+.search {
+    color: #666666;
+    width: 170px;
+}
+
+p {
+    text-indent: 2em;
+}
+
+.pic {
+    text-align: center;
+    /*图片要居中对齐，给img设置不会生效，得给他的父级设置*/
+}
+
+.but {
+    color: #888888;
+    font-size: 12px;
+}
