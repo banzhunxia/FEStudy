@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fs1 {
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        .a1 {
+            float: left;
+            width: 200px;
+            height: 80px;
+            background-color: black;
+        }
+
+        .b1 {
+            float: left;
+            width: 200px;
+            height: 80px;
+            background-color: blue;
+        }
+
+        .last {
+            clear: both;
+            /*1额外标签法、在最后增加一个空标签{这个标签必须是个块元素}，清除浮动*/
+        }
+
+        .fs2 {
+            /*2、在浮动的父元素添加overflow*/
+            overflow: auto;
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        .fs3 {
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        /*3、给父元素添加after伪元素*/
+        .clearfix1:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        /*为了兼容ie，可以不需要
+        .clearfix1 {
+            *zoom: 1;
+        }
+        */
+
+        .fs4 {
+            width: 500px;
+            border: 1px solid black;
+        }
+
+        /*4、给父元素添加双伪元素*/
+        .clearfix2:before,
+        .clearfix2:after {
+            content: "";
+            display: block;
+        }
+
+        .clearfix2:after {
+            clear: both;
+        }
+
+        /*为了兼容ie，可以不需要
+        .clearfix2 {
+            *zoom: 1;
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <div class="fs1">
+        <div class="a1"></div>
+        <div class="b1"></div>
+        <div class="b1"></div>
+        <div class="last"></div>
+    </div>
+    <br>
+    <div class="fs2">
+        <div class="a1"></div>
+        <div class="b1"></div>
+        <div class="b1"></div>
+    </div>
+    <br>
+    <div class="fs3 clearfix1">
+        <div class="a1"></div>
+        <div class="b1"></div>
+        <div class="b1"></div>
+    </div>
+    <br>
+    <div class="fs4 clearfix2">
+        <div class="a1"></div>
+        <div class="b1"></div>
+        <div class="b1"></div>
+    </div>
+
+</body>
+
+</html>

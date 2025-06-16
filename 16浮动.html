@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1、设置了浮动后，将脱离普通位置，而移动到指定位置（俗称脱标）*/
+        /*2、浮动的和将不再保留原先的位置*/
+        /*3、浮动的盒子都在一行显示，顶端对齐；当浏览器一行装不下时会换行显示*/
+        .box1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+        }
+
+        /*4、所有元素都能设置浮动，设置了浮动后，就能直接拥有行内块元素特性(不需要再通过display来转换)*/
+        .mm {
+            float: left;
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 多个块级元素纵向排列用标准流，多个块级元素横向排列用浮动流 -->
+    <div class="box1">浮动的盒子</div>
+    <div class="box2">标准的盒子</div>
+    <spa class="mm"></spa>
+</body>
+
+</html>
