@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 42px;
+    /* background-color: pink; */
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background-image: url(image/logo.png);
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+/*要让a一行显示，需要给它的父级li设置浮动*/
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #000;
+}
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    /* background-color: skyblue; */
+    margin-left: 70px;
+}
+
+.search input {
+    /*input、button属于行内块元素，中间有空隙，设置浮动取消空隙*/
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.search button {
+    /*input、button属于行内块元素，中间有空隙，设置浮动取消空隙*/
+    float: left;
+    width: 50px;
+    height: 42px;
+    background: url(image/btn.png);
+    /*按钮button默认有个边框，需要手动去掉*/
+    border: 0;
+}
+
+.user {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .w {
+    height: 420px;
+    background: url(image/banner2_20190819_210028.png) no-repeat top center;
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 420px;
+    background: rgba(0, 0, 0, .3);
+}
+
+.subnav ul li {
+    height: 45px;
+    padding: 0 20px;
+    line-height: 45px;
+}
+
+.subnav ul li a {
+    /*给<a>设置display: block;
+    这样无论鼠标悬停在li的哪个位置，都会触发a的hover效果*/
+    display: block;
+    font-size: 14px;
+    color: #fff;
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    /*浮动的盒子不会有外边距合并问题*/
+    margin-top: 50px;
+}
+
+.course h2 {
+    height: 48px;
+    background-color: #9bceea;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+}
+
+.bd {
+    padding: 0 20px;
+}
+
+.bd ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.bd .more {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+}
