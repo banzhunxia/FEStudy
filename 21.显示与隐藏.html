@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tudou {
+            position: relative;
+            width: 440px;
+            height: 320px;
+            margin: 30px auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .3) url(image/arr1.png) no-repeat center;
+        }
+
+        .tudou:hover .mask {
+            display: block;
+        }
+
+        .yichu {
+            /*当有超出部分时，才显示滚动条*/
+            overflow: auto;
+            width: 300px;
+            height: 260px;
+            border: 3px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tudou">
+        <div class="mask"></div>
+        <img src="image/tudou.jpg" alt="">
+    </div>
+    <div class="yichu">
+        <p>中方强烈谴责美方袭击伊朗，攻击国际原子能机构监管下的核设施。美方此举严重违反联合国宪章宗旨和原则以及国际法，加剧中东紧张局势。中方呼吁冲突当事方尤其是以色列尽快停火，保障平民安全，开启对话谈判。
+            中方愿同国际社会一道，凝聚合力、主持公道，为恢复中东地区和平稳定作出努力。据@CCTV国际时讯，伊朗迈赫尔通讯社报道， 在当地时间今天（6月22日）早上对以色列的新一轮导弹袭击中，伊朗首次使用了“开伯尔”导弹。
+            据了解，“开伯尔”导弹很有可能指的就是伊朗此前曾公布的“霍拉姆沙赫尔-4”远程弹道导弹。据伊朗媒体此前报道，“霍拉姆沙赫尔-4”导弹被认为是“伊朗破坏力最强的导弹”。
+            2023年5月，伊朗公布本土新型研发的“霍拉姆沙赫尔4”远程弹道导弹。该导弹射程可达2000公里，配备重达1500公斤的长约4米的弹头。</p>
+    </div>
+</body>
+
+</html>

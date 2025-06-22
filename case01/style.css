@@ -105,6 +105,11 @@ a {
     color: #666666;
 }
 
+.user img {
+    /*这个标签实现图片、表单（行内块元素）与文字垂直居中*/
+    vertical-align: middle;
+}
+
 .banner {
     height: 420px;
     background-color: #1c036c;

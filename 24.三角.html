@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 0;
+            height: 0;
+            /*下面两个是为了兼容旧浏览器*/
+            line-height: 0;
+            font-size: 0;
+            border: 20px solid transparent;
+            border-top-color: burlywood;
+        }
+
+        .box1 {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        .box1 span {
+            position: absolute;
+            right: -40px;
+            top: 20px;
+            /*要实现三角width与height必须为0*/
+            width: 0;
+            height: 0;
+            /*下面两个是为了兼容旧浏览器*/
+            line-height: 0;
+            font-size: 0;
+            border: 20px solid transparent;
+            border-left-color: pink;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid red;
+            margin: 30px auto;
+        }
+
+        .miaosha {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color: white;
+            margin-right: 8px;
+        }
+
+        .miaosha i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            /*通过设置边框像素来实现三角形的大小*/
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .orgin {
+            color: gray;
+            text-decoration: line-through;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1">
+        <span></span>
+    </div>
+    <div class="price">
+        <span class="miaosha">￥1650
+            <i></i>
+        </span>
+        <span class="orgin">￥1950</span>
+    </div>
+</body>
+
+</html>

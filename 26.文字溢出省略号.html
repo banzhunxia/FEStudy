@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text1 {
+            width: 200px;
+            height: 300px;
+            border: 1px solid;
+            /*1、先让文字强制一行显示*/
+            white-space: nowrap;
+            /*2、让溢出部分隐藏*/
+            overflow: hidden;
+            /*3、超出部分显示为省略号*/
+            text-overflow: ellipsis;
+        }
+
+        .text2 {
+            width: 200px;
+            height: 300px;
+            border: 1px solid;
+            /*1、让溢出部分隐藏*/
+            overflow: hidden;
+            /*2、超出部分显示为省略号*/
+            text-overflow: ellipsis;
+            /*弹性伸缩盒子模型显示*/
+            display: -webkit-box;
+            /*限制在一个块元素显示的文本行数*/
+            -webkit-line-clamp: 2;
+            /*设置或检索伸缩盒对象的子元素的排列方式*/
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text1">
+        伊朗称袭击以色列机场及涉军事设施，以军对伊朗西部发动新空袭。
+    </div>
+    <div class="text2">
+        伊朗称袭击以色列机场及涉军事设施，以军对伊朗西部发动新空袭。
+    </div>
+</body>
+
+</html>
